@@ -1,4 +1,4 @@
-// Square Root
+//Square Root
 function squareRoot(num) {
     if (num < 0) {
         return "Error: Cannot calculate square root of a negative number.";
