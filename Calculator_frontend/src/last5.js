@@ -1,18 +1,19 @@
 // Square Root
-function squareRoot(num) {
+export function squareRoot(num) {
     if (num < 0) {
         return "Error: Cannot calculate square root of a negative number.";
     }
-    return Math.sqrt(num);
+
+    return Number(Math.sqrt(num).toFixed(6));
 }
 
 // Power
-function power(base, exponent) {
-    return Math.pow(base, exponent);
+export function power(base, exponent) {
+    return Number(Math.pow(base, exponent).toFixed(6));
 }
 
 // Factorial
-function factorial(num) {
+export function factorial(num) {
     if (num < 0) {
         return "Error: Factorial is not defined for negative numbers.";
     }
@@ -27,27 +28,19 @@ function factorial(num) {
         result *= i;
     }
 
-    return result;
+    return Number(result.toFixed(6));
 }
 
 // Reciprocal
-function reciprocal(num) {
+export function reciprocal(num) {
     if (num === 0) {
         return "Error: Cannot divide by zero.";
     }
 
-    return 1 / num;
+    return Number((1 / num).toFixed(6));
 }
 
 // Sign Change
-function signChange(num) {
-    return -num;
+export function signChange(num) {
+    return Number((-num).toFixed(6));
 }
-
-module.exports = {
-    squareRoot,
-    power,
-    factorial,
-    reciprocal,
-    signChange
-};
